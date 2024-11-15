@@ -24,7 +24,7 @@ public class LoginTest {
         driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
         driver.get("https://www.saucedemo.com/");
     }
-/*
+
     @Test
     public void regitservalid() throws IOException, ParseException {
         Loginvalid login=new Loginvalid(driver);
@@ -34,7 +34,7 @@ public class LoginTest {
         String actualtitle=driver.findElement(logo).getText();
         Assert.assertEquals(expectedtitle,actualtitle);
     }
-*/
+
 
     @Test
     public void loginwithvalidnameandinvalidpassword()throws IOException, ParseException{
