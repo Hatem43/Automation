@@ -25,7 +25,7 @@ public class CartTest {
         driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
         driver.get("https://www.saucedemo.com/");
     }
-/*
+
     @Test
     public void checkcartList()throws IOException, ParseException{
         Loginvalid login=new Loginvalid(driver);
@@ -40,9 +40,9 @@ public class CartTest {
         Assert.assertEquals(actual,expected);
     }
 
- */
+ 
 
-    /*
+
     @Test
     public void removecartitem()throws IOException, ParseException{
         Loginvalid login=new Loginvalid(driver);
@@ -56,7 +56,7 @@ public class CartTest {
         boolean expected=true;
         Assert.assertEquals(actual,expected);
     }
-    */
+    
 
     @Test
     public void addmultipleitemstocart()throws IOException, ParseException{
