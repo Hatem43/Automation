@@ -1,2 +1,2 @@
 # Automation
-Swag Labs 
+Swag Labs using POM(Page object Model) 
