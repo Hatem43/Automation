@@ -45,16 +45,23 @@ public class ProductsPage {
     }
 
     public boolean productsortsfromZtoA(){
-        List<WebElement> beforesortproducts=driver.findElements(productssort);
-        List<String> beforesortList=new ArrayList<>();
-        Select sortAtoz=new Select(driver.findElement(sort));
-        sortAtoz.selectByVisibleText("Name (Z to A)");
-        List<WebElement> aftersortproducts=driver.findElements(productssort);
-        List<String> aftersortList=new ArrayList<>();
-        Collections.sort(beforesortList);
-        boolean actual=beforesortList.equals(aftersortList);
-        return actual;
+      List<WebElement> beforesortproducts = driver.findElements(productssort);
+List<String> beforesortList = new ArrayList<>();
+for(WebElement product : beforesortproducts) {
+    beforesortList.add(product.getText());
+}
+Select sortAtoz = new Select(driver.findElement(sort));
+sortAtoz.selectByVisibleText("Name (Z to A)");
+List<WebElement> aftersortproducts = driver.findElements(productssort);
+List<String> aftersortList = new ArrayList<>();
+for(WebElement product : aftersortproducts) {
+    aftersortList.add(product.getText());
+}
+Collections.sort(beforesortList, Collections.reverseOrder());
+boolean actual = beforesortList.equals(aftersortList);
+return actual;
     }
+    
     public String logout(){
         driver.findElement(menu).click();
         driver.findElement(logout).click();
@@ -62,3 +69,4 @@ public class ProductsPage {
         return actual;
     }
 }
+
