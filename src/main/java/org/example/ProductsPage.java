@@ -50,8 +50,8 @@ List<String> beforesortList = new ArrayList<>();
 for(WebElement product : beforesortproducts) {
     beforesortList.add(product.getText());
 }
-Select sortAtoz = new Select(driver.findElement(sort));
-sortAtoz.selectByVisibleText("Name (Z to A)");
+Select sortZtoA = new Select(driver.findElement(sort));
+        sortZtoA.selectByVisibleText("Name (Z to A)");
 List<WebElement> aftersortproducts = driver.findElements(productssort);
 List<String> aftersortList = new ArrayList<>();
 for(WebElement product : aftersortproducts) {
